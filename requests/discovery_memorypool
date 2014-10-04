@@ -1,0 +1,1 @@
+select distinct pool from v$sgastat where pool is not null

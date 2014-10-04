@@ -1,0 +1,4 @@
+select
+   round(bytes) as fMb
+from
+   dba_segments where owner='SYSTEM' and segment_name='AUD$'

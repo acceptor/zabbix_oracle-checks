@@ -1,0 +1,4 @@
+select
+   bytes
+from
+   v$sgastat where name = 'free memory' and pool = '${VAR}'
