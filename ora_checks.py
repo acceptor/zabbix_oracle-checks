@@ -31,14 +31,14 @@
 ##                     FROM
 ##                         DBA_DATA_FILES WHERE TABLESPACE_NAME='${VAR}'
 ##
-## Пример использования с zabbix aent: 
+## Пример использования с zabbix agent: 
 ##                UserParameter=tablespace.name,C:\python33\python.exe "C:\Program Files\zabbix_agents_2.2.0\scripts\ora_checks.py" discovery_tablespace -m {#TABLESPACENAME}
 ##                UserParameter=tablespace[*],C:\python33\python.exe "C:\Program Files\zabbix_agents_2.2.0\scripts\ora_checks.py" $1 -r $2
 ##                UserParameter=audittablesize,C:\python33\python.exe "C:\Program Files\zabbix_agents_2.2.0\scripts\ora_checks.py" audit_size
 ##                UserParameter=oracheck[*],C:\python33\python.exe "C:\Program Files\zabbix_agents_2.2.0\scripts\ora_checks.py" $1
 ##                UserParameter=memorypool.name,C:\python33\python.exe "C:\Program Files\zabbix_agents_2.2.0\scripts\ora_checks.py" discovery_memorypool -m {#MEMORYPOOL}
 ##                UserParameter=memorypool[*],C:\python33\python.exe "C:\Program Files\zabbix_agents_2.2.0\scripts\ora_checks.py" $1 -r "$2"
-##                UserParameter=pga[*],C:\python33\python.exe "C:\Program Files\zabbix_agents_2.2.0\scripts\ora_checks.py" pga -r "$1"
+##                UserParameter=pga[*],/usr/bin/python /etc/zabbix/scripts/ora_checks.py pga -r "$1"
 ##
  
 import argparse
